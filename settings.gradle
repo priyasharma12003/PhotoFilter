@@ -1,0 +1,13 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        mavenCentral() // For ImagePicker library, this line is enough. Although, it has been published on jitpack as well
+        maven { url "https://jitpack.io" }
+
+    }
+}
+rootProject.name = "ProjectC1"
+include ':app'

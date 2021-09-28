@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:layout_weight="4"
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_weight="3">
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:src="@drawable/img1496161759515"
+        android:id="@+id/img" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="-100dp"
+        android:layout_width="wrap_content"
+        android:clickable="true"
+        android:backgroundTint="@color/ucrop_color_widget_background"
+        app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:textColor="@color/white"
+            android:drawableLeft="@drawable/ic_baseline_save_24"
+            android:drawablePadding="10dp"
+            android:backgroundTint="@color/bluw"
+            android:gravity="center"
+            android:drawableTint="@color/white"
+            android:visibility="gone"
+            android:layout_marginLeft="150dp"
+            android:id="@+id/save" />
+    </LinearLayout>
+    <HorizontalScrollView
+
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_weight="1">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img1496161759515"
+            android:id="@+id/filter1"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img1496161759515"
+            android:id="@+id/filter2"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img1496161759515"
+            android:id="@+id/filter3"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img1496161759515"
+            android:id="@+id/filter4"/>
+
+    </LinearLayout>
+
+    </HorizontalScrollView>
+
+
+</LinearLayout>
