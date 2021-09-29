@@ -84,6 +84,18 @@
             android:layout_margin="10dp"
             android:src="@drawable/img1496161759515"
             android:id="@+id/filter4"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img1496161759515"
+            android:id="@+id/filter5"/>
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/img1496161759515"
+            android:id="@+id/filter6"/>
 
     </LinearLayout>
 

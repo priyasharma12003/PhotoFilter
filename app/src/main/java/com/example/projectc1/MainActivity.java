@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    ImageView image,filter1,filter2,filter3,filter4;
+    ImageView image,filter1,filter2,filter3,filter4,filter5,filter6;
     FloatingActionButton fab;
     Bitmap originalbitmap;
     Button save;
@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             filter2.setImageURI(uri);
             filter3.setImageURI(uri);
             filter4.setImageURI(uri);
+            filter5.setImageURI(uri);
+            filter6.setImageURI(uri);
         try {
             discard =MediaStore.Images.Media.getBitmap(getContentResolver(),uri);
         } catch (IOException e) {
@@ -71,6 +73,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         filter2=findViewById(R.id.filter2);
         filter3=findViewById(R.id.filter3);
         filter4=findViewById(R.id.filter4);
+        filter5=findViewById(R.id.filter5);
+        filter6=findViewById(R.id.filter6);
         fab=findViewById(R.id.floatingActionButton);
         save=findViewById(R.id.save);
 
@@ -78,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         filter2.setOnClickListener(this);
         filter3.setOnClickListener(this);
         filter4.setOnClickListener(this);
+        filter5.setOnClickListener(this);
+        filter6.setOnClickListener(this);
 
         BitmapDrawable drawable=(BitmapDrawable)image.getDrawable();
         originalbitmap=drawable.getBitmap();
@@ -139,7 +145,6 @@ fab.setOnClickListener(new View.OnClickListener() {
     @Override
     public boolean onOptionsItemSelected( MenuItem item) {
         image.setImageBitmap(discard);
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -185,6 +190,24 @@ fab.setOnClickListener(new View.OnClickListener() {
                 Bitmap inputImage4= discard.copy(Bitmap.Config.ARGB_8888,true);
                 Bitmap outputImage4 = fooFilter4.processFilter(inputImage4);
                 image.setImageBitmap(outputImage4);
+                break;
+
+            case R.id.filter5:
+                Filter fooFilter5 = SampleFilters.getStarLitFilter();
+                //BitmapDrawable bitmapDrawable3=(BitmapDrawable)image.getDrawable();
+                //Bitmap bitmap3=bitmapDrawable3.getBitmap();
+                Bitmap inputImage5= discard.copy(Bitmap.Config.ARGB_8888,true);
+                Bitmap outputImage5 = fooFilter5.processFilter(inputImage5);
+                image.setImageBitmap(outputImage5);
+                break;
+
+            case R.id.filter6:
+                Filter fooFilter6 = SampleFilters.getAweStruckVibeFilter();
+                //BitmapDrawable bitmapDrawable3=(BitmapDrawable)image.getDrawable();
+                //Bitmap bitmap3=bitmapDrawable3.getBitmap();
+                Bitmap inputImage6= discard.copy(Bitmap.Config.ARGB_8888,true);
+                Bitmap outputImage6 = fooFilter6.processFilter(inputImage6);
+                image.setImageBitmap(outputImage6);
                 break;
 
 
